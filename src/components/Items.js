@@ -6,13 +6,11 @@ export default class Items extends Component {
     const { filteredItems } = this.$props;
     return `
       <ul>
-        ${filteredItems.map(({contents, active, seq}) => `
+        ${filteredItems.map(({contents, check, seq}) => `
           <li data-seq="${seq}">
             ${contents}
-            <button class="toggleBtn" style="color: ${active ? '#09F' : '#F09'}">
-              ${active ? '활성' : '비활성'}
+            <input type="checkbox" class="checkBtn" ${check ? 'checked' : ''}>
             </button>
-            <button class="deleteBtn">삭제</button>
           </li>
         `).join('')}
       </ul>
@@ -20,14 +18,10 @@ export default class Items extends Component {
   }
 
   setEvent() {
-    const { deleteItem, toggleItem } = this.$props;
+    const { checkItem } = this.$props;
 
-    this.addEvent('click', '.deleteBtn', ({target}) => {
-      deleteItem(Number(target.closest('[data-seq]').dataset.seq));
-    });
-
-    this.addEvent('click', '.toggleBtn', ({target}) => {
-      toggleItem(Number(target.closest('[data-seq]').dataset.seq));
+    this.addEvent('click', '.checkBtn', ({target}) => {
+      checkItem(Number(target.closest('[data-seq]').dataset.seq));
     });
 
   }
