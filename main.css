@@ -1,0 +1,156 @@
+ul {
+    font-size: 22px;
+}
+
+h1 {
+    text-align: center;
+}
+
+header[data-component="head"] {
+    background-color: aliceblue;
+    position: absolute;
+    top: 10%;
+    left: 24%;
+    width: 1000px;
+}
+
+footer[data-component="foot"] {
+    position: fixed;
+    text-align: center;
+    bottom: 4%;
+    width: 100%;
+}
+
+clock[data-component="time"] {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.appender {
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+.button {
+    background-color: aliceblue;
+    color: #1e6b7b;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.button:hover{
+    border : 1px solid black;
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .button:active {
+    transform: scale(1.5);
+  }
+
+main[data-component="todo"] {
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    width: 1000px;
+    text-align: center;
+}
+
+.todoinput {
+    display: inline-block;
+}
+
+.itemlist {
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 30px 30px 30px 30px;
+}
+
+main3[data-component="item-delete"] {
+    margin-right: 75%;
+}
+
+.deleteBtn {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.check {
+    display: block;
+    position: relative;
+    width: 850px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.value {
+    text-decoration: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.check input:checked ~ .checkmark {
+    background-color: #79aeda;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check input:checked ~ .value {
+    text-decoration: line-through;
+}
+
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}

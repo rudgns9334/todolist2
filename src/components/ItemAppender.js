@@ -3,9 +3,9 @@ import Component from "../core/Component.js";
 export default class ItemAppender extends Component {
 
   template() {
-    return `<div>
-            <input type="text" class="appender" placeholder="할일" />
-            <button type="submit" class="addBtn">추가</button>
+    return `<div class="todoinput">
+            <input type="text" class="appender" placeholder="할 일" />
+            <button type="submit" class="button addBtn">추가</button>
             </div>`;
   }
 
