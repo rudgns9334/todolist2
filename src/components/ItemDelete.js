@@ -4,8 +4,8 @@ export default class ItemDelete extends Component {
 
   template() {
     return `
-      <button class="deleteBtn">선택 삭제</button>
-      <button class="deleteBtnAll">전체 삭제</button>
+      <button class="button deleteBtn">선택 삭제</button>
+      <button class="button deleteBtnAll">전체 삭제</button>
     `
   }
 
