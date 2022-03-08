@@ -25,7 +25,7 @@ export default class Todo extends Component{
         const $itemAppender = this.$target.querySelector('[data-component="item-appender"]');
         const $items = this.$target.querySelector('[data-component="items"]');
         const $itemDelete = this.$target.querySelector('[data-component="item-delete"]');
-
+        
         new ItemAppender($itemAppender, {
             addItem: addItem.bind(this)
         });

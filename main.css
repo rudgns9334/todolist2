@@ -154,3 +154,53 @@ main3[data-component="item-delete"] {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+
+main[data-component="calendar"] {
+    position: absolute;
+    top:20%;
+    left:20%;
+}
+
+nav[data-component="nav"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 78px;
+}
+
+.year-month {
+    width: 300px;
+    text-align: center;
+    line-height: 1;
+}
+
+day[data-component="day"] {
+    padding-top: 40px;
+    position: relative;
+    margin: 0 auto;
+}
+
+day[data-component="day"]::after {
+    top:368px;
+}
+
+.days {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.day {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 7);
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    border-radius:5px
+}
