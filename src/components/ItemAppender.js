@@ -15,7 +15,6 @@ export default class ItemAppender extends Component {
       if (key !== 'Enter') return;
       addItem(target.value);
     });
-
     this.addEvent('click', '.addBtn', ({target}) => {
       addItem(target.closest("div").firstChild.nextSibling.value);
     });

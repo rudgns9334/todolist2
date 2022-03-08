@@ -30,4 +30,8 @@ export default class Component {
         callback(event);
       })
     }
+
+    getTemplate () {
+      return this.$target.innerHTML;
+    }
   }
