@@ -1,21 +1,12 @@
 import Component from "../core/Component.js";
+import { store } from "../store/store.js";
 
 export default class Clock extends Component {
 
-    setup () {
-        const $dateInfo = new Date();
-        this.$state = {
-            hour: $dateInfo.getHours()<10?"0"+$dateInfo.getHours():$dateInfo.getHours(),
-            min: $dateInfo.getMinutes()<10?"0"+$dateInfo.getMinutes():$dateInfo.getMinutes(),
-            sec: $dateInfo.getSeconds()<10?"0"+$dateInfo.getSeconds():$dateInfo.getSeconds(),
-            year: $dateInfo.getFullYear(),
-            month: $dateInfo.getMonth()+1,
-            date: $dateInfo.getDate()
-        }
-    }
 
     template () {
-        const { hour, min, sec, year, month, date } = this.$state;
+        const state = store.getState();
+        console.log(state);
         return `
             <div>${hour}:${min}:${sec}</div>
             <div>${year}년${month}월${date}일</div>
