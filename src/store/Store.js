@@ -2,7 +2,6 @@ import { createStore } from "./node_modules/redux";
 
 const $dateInfo = new Date();
 const initialState = {
-    isFilter: 0,
     items: [],
     clock: [{
         hour: $dateInfo.getHours()<10?"0"+$dateInfo.getHours():$dateInfo.getHours(),
