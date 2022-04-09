@@ -1,5 +1,5 @@
 export function createStore(reducer) {
-    let state;
+    let state = reducer(state,action);
     const listeners = new Set();
   
     const getState = () => ({ ...state });
