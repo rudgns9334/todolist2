@@ -1,4 +1,4 @@
-import { createStore } from "./node_modules/redux";
+import { createStore } from "redux";
 
 const $dateInfo = new Date();
 const initialState = {
