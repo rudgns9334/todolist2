@@ -7,6 +7,7 @@
     "start": "webpack serve",
     "build": "webpack -w"
   },
+  "proxy":"http://localhost:8080",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rudgns9334/todolist2.git"
