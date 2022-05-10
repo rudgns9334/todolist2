@@ -2,6 +2,8 @@ import Component from "../core/Component.js";
 
 export default class Footer extends Component {
     template() {
-        return `<p>Made by notMe</p>`
+        fetch("http://localhost:3000/todo")
+        .then((response) => console.log(response));
+        return `<p>ddd</p>`
     }
 }
