@@ -50,6 +50,19 @@ export default class Todo extends Component{
     const {items} = this.$state;
     const seq = Math.max(0, ...items.map(v => v.seq)) + 1;
     const check = false;
+    fetch("/list", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+       id: seq,
+       value: contents
+      }),
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
     this.setState({
       items: [
         ...items,

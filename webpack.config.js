@@ -5,7 +5,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: "development",
     devServer: {
-        static : "./dist"
+        static : "./dist",
+        proxy: {
+            '/todo' : {
+                target: 'http://localhost:3000',
+                changeOrigin: true
+            },
+            '/list' : {
+                target: 'http://localhost:3000',
+                changeOrigin: true
+            }
+        }
     },
     entry:'./src/main.js',
     output: {
