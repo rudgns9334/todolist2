@@ -8,10 +8,12 @@ export default class Component {
       this.setup();
       this.setEvent();
       this.render();
+      this.componenetDidMount();
     }
     setup () {};
     mounted () {};
     template () { return ''; }
+    componenetDidMount () {};
     render () {
       this.$target.innerHTML = this.template();
       this.mounted();
